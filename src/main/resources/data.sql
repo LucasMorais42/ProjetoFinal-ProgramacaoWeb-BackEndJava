@@ -1,0 +1,2 @@
+INSERT INTO TBL_CONTACT (NAME, NICK_NAME, PHONE_NUMBER, EMAIL, CREATED_AT, DATE_BIRTH, ADDRESS, GROUP_NAME, BLOCKED, FAVORITE)
+VALUES ('Lucas', 'Luquinhas', '(11)99312931', 'teste@email.com', '2022-01-12', '2004-03-26', 'Rua das Ostras', 'Familia', false, true);
