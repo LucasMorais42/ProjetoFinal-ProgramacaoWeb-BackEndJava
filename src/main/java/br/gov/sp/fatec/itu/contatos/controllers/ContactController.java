@@ -36,13 +36,13 @@ public class ContactController {
         return ResponseEntity.created(null).body(contact_service.save(contact));
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("{id}")
     public ResponseEntity<Void> editContact(@PathVariable long id, @RequestBody Contact contact){
         contact_service.update(contact, id);
         return ResponseEntity.noContent().build();
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("{id}")
     public ResponseEntity<Void> deleteContact(@PathVariable long id){
         contact_service.delete(id);
         return ResponseEntity.noContent().build();

@@ -35,7 +35,7 @@ public class ContactService {
         aux.setCreated_at(contact.getCreated_at());
         aux.setDate_birth(contact.getDate_birth());
         aux.setAddress(contact.getAddress());
-        aux.setGroupname(contact.getGroupname());
+        aux.setGroup_name(contact.getGroup_name());
         aux.setBlocked(contact.getBlocked());
         aux.setFavorite(contact.getFavorite());
 

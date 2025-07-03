@@ -2,9 +2,11 @@ package br.gov.sp.fatec.itu.contatos.entities;
 
 
 import java.io.Serializable;
+import java.sql.Date;
 import java.time.LocalDate;
 
-import jakarta.persistence.Column;
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -18,35 +20,19 @@ public class Contact implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    
-    @Column(name = "NAME")
     private String name;
-
-    @Column(name = "NICK_NAME")
     private String nick_name;
-
-    @Column(name = "PHONE_NUMBER")
     private String phone_number;
-
-    @Column(name = "EMAIL")
     private String email;
 
-    @Column(name = "CREATED_AT")
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate created_at;
 
-    @Column(name = "DATE_BIRTH")
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate date_birth;
-
-    @Column(name = "ADDRESS")
     private String address;
-
-    @Column(name = "GROUP_NAME")
     private String group_name;
-
-    @Column(name = "BLOCKED")
     private Boolean blocked;
-
-    @Column(name = "FAVORITE")
     private Boolean favorite;
 
     public long getId() {
@@ -97,10 +83,10 @@ public class Contact implements Serializable{
     public void setAddress(String address) {
         this.address = address;
     }
-    public String getGroupname() {
+    public String getGroup_name() {
         return group_name;
     }
-    public void setGroupname(String group_name) {
+    public void setGroup_name(String group_name) {
         this.group_name = group_name;
     }
     public Boolean getBlocked() {
