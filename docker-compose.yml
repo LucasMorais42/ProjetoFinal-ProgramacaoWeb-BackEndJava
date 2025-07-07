@@ -9,3 +9,16 @@ services:
     volumes:
       - ./data:/data
       - ./letsencrypt:/etc/letsencrypt
+
+  contatos:
+    image: contatos:latest
+    # Não mapear a porta 80 para fora do container
+    # expose permite expor a porta só para a rede Docker
+    expose:
+      - '8080'
+    networks:
+      - npm-network
+
+networks:
+  npm-network:
+    driver: bridge
